@@ -162,14 +162,14 @@ export default function LoanComponent(){
       </div>
     </div>
   
-    <div className="btn-container">
+    <div className="btns-container">
       <div className="calc-btn-container">
       <button className="clc-btn" onClick={()=>calcType=="emi"? calcEmi() : calcInt()}>Calculate</button>
       </div>
     
-    <div className="reset-btn-container">
-      <button className="reset-btn" onClick={resetCalc}>Reset</button>
-    </div>
+      <div className="reset-btn-container">
+        <button className="reset-btn" onClick={resetCalc}>Reset</button>
+      </div>
     </div>
 
     <div className="result-clm">

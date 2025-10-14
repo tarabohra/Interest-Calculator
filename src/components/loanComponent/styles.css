@@ -1,6 +1,11 @@
 body{
   background-color: white;
 }
+
+* {
+  box-sizing: border-box;
+}
+
 @media only screen and (width<=680px) {
  .container-div{
     width:85vw;
@@ -132,13 +137,18 @@ body{
 .loan-amt-input{
   border:1px solid rgb(108, 106, 106);
   width: 100%;
-  outline: none;
+  padding: 0;
 }
 
 .loan-amt-input input{
-  width: 98.8%;
-  height: 87%;
-  font-size: 20px;
+  width: 100%;
+  height: 40px; /* set a fixed or responsive height */
+  font-size: 16px; /* IMPORTANT: prevents iPhone zooming */
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 5px;
+  box-sizing: border-box;
 }
 
 .loan-amt-input input:hover{
@@ -192,6 +202,7 @@ body{
 .int-rate-input{
   border:1px solid rgb(108, 106, 106);
   width: 100%;
+  padding: 0;
 }
 
 .int-rate-input input:hover{
@@ -206,9 +217,14 @@ body{
 
 
 .int-rate-input input{
-  width: 98.8%;
-  height: 88%;
-  font-size: 20px;
+  width: 100%;
+  height: 40px; /* set a fixed or responsive height */
+  font-size: 16px; /* IMPORTANT: prevents iPhone zooming */
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 5px;
+  box-sizing: border-box;
   
 }
 
@@ -251,12 +267,18 @@ body{
 .loan-time-input{
   border:1px solid rgb(108, 106, 106);
   width: 100%;
+  padding: 0;
 }
 
 .loan-time-input input{
-  width: 98.8%;
-  height: 87%;
-  font-size: 20px;
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  margin:0;
+  padding: 5px;
+  box-sizing: border-box;
 }
 
 .loan-time-input input:hover{
@@ -271,8 +293,9 @@ body{
 
 .calc-btn-container,
 .reset-btn-container{
-  margin-top: 50px;
-  padding-bottom: 20px;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+
 }
 
 .calc-btn{
@@ -280,7 +303,7 @@ body{
   height: 7vh;
   border-radius: 10px;
   background-color: rgb(136, 194, 194);
-  font-size: 20px;
+  font-size: 16px;
   border: none;
 }
 
