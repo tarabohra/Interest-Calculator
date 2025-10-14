@@ -7,11 +7,18 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
+      workbox:{
+        cleanupOutdatedCaches:true,
+      },
+      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'mask-icon.svg'],
       manifest: {
         name: 'Interest Calculator',
         short_name: 'IntCalc',
         description: 'Calculator for RD,FD, and Loan',
         theme_color: '#ffffff',
+        start_url: '.',
+        display: 'standalone',
+        background_color: '#ffffff',
         icons: [
           {
             src: '/calc.png',
