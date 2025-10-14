@@ -20,11 +20,11 @@ export default function RdComponent(){
   const [contri, setContri]=useState("");
 
   function calculate(){
-    if(!roi|| !amount || !time || roi==0 || amount==0 || time==0 || isNaN(roi) || isNaN(amount) || isNaN(time)){
+    if(roi<0 || amount<0 || time<0||!roi|| !amount || !time || roi==0 || amount==0 || time==0 || isNaN(roi) || isNaN(amount) || isNaN(time)){
       setIsEmpty(true);
-      setInterest(0);
-      setMatAmt(0);
-      setContri(0);
+      setInterest("invalid entry");
+      setMatAmt("invalid entry");
+      setContri("invalid entry");
       return;
     }
 
@@ -92,16 +92,16 @@ export default function RdComponent(){
         <div className="amt-block">
           <label>Amount</label>
           {
-            isEmpty? <input onChange={(e)=>setAmount(Number(e.target.value))} placeholder='Mandatory'></input>
-            :<input value={amount} onChange={(e)=>setAmount(Number(e.target.value))}></input>
+            isEmpty? <input type='number' min='1' onChange={(e)=>setAmount(e.target.value)} placeholder='Mandatory'></input>
+            :<input type='number' min='1' value={amount} onChange={(e)=>setAmount(e.target.value)}></input>
 
           }
       </div>
         <div className="roi-div">
           <label>Rate of Interest</label>
           {
-            isEmpty? <input onChange={(e)=>setRoi(e.target.value)} placeholder='Mandatory'></input>
-            :<input value={roi} onChange={(e)=>setRoi(e.target.value)}></input>
+            isEmpty? <input type='number' min='1' onChange={(e)=>setRoi(e.target.value)} placeholder='Mandatory'></input>
+            :<input type='number' min='1'  value={roi} onChange={(e)=>setRoi(e.target.value)}></input>
 
           }
         </div>
@@ -116,8 +116,8 @@ export default function RdComponent(){
             <option>Months</option>
           </select>
           {
-            isEmpty? <input  onChange={(e)=>setTime(Number(e.target.value))} placeholder='Mandatory'></input>
-            :<input value={time} onChange={(e)=>setTime(Number(e.target.value))}></input>          }
+            isEmpty? <input type='number' min='1' onChange={(e)=>setTime(e.target.value)} placeholder='Mandatory'></input>
+            :<input type='number' min='1' value={time} onChange={(e)=>setTime(e.target.value)}></input>          }
           </div>
         
         </div>

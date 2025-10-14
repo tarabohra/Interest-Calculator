@@ -38,11 +38,11 @@ export default function LoanComponent(){
     let rate=0;
     let time=0;
 
-    if(p==0|| r==0 || n==0 || !r || !p || !n || isNaN(r)|| isNaN(p) || isNaN(n)){
+    if(p<0|| r<0 || n<0||p==0|| r==0 || n==0 || !r || !p || !n || isNaN(r)|| isNaN(p) || isNaN(n)){
      setEmpty(true);
-     setEmi(0);
-     setInterest(0);
-     setAmount(0);
+     setEmi("invalid entry");
+     setInterest("invalid entry");
+     setAmount("invalid entry");
      return;
     }
 
@@ -73,10 +73,10 @@ export default function LoanComponent(){
     let t=0;
     let N=0;
 
-    if(p==0|| r==0 || n==0 || !r || !p || !n || isNaN(r)|| isNaN(p) || isNaN(n)){
+    if(p<0|| r<0 || n<0|| p==0|| r==0 || n==0 || !r || !p || !n || isNaN(r)|| isNaN(p) || isNaN(n)){
      setEmpty(true);
-     setInterest(0);
-     setAmount(0);
+     setInterest("invalid entry");
+     setAmount("invalid entry");
      return;
     }
 
@@ -110,8 +110,8 @@ export default function LoanComponent(){
       <div className="loan-amt">
         <div className="rupee-sign">₹</div>
         {
-          empty?<div className="loan-amt-input"><input  placeholder="This field is mandatory" type="text" onChange={(e)=>setP(e.target.value)}></input></div>
-          :<div className="loan-amt-input"><input value={p} type="text" onChange={(e)=>setP(Number(e.target.value))}></input></div>
+          empty?<div className="loan-amt-input"><input type='number' min='1' placeholder="This field is mandatory" onChange={(e)=>setP(e.target.value)}></input></div>
+          :<div className="loan-amt-input"><input type='number' min='1' value={p} onChange={(e)=>setP(e.target.value)}></input></div>
         }
       </div>
     </div>
@@ -121,8 +121,8 @@ export default function LoanComponent(){
       <div className="int-rate">
         <div className="percent-sign">％</div>
         {
-          empty? <div className="int-rate-input"><input type="text" placeholder="This field is mandatory" onChange={(e)=>setR(e.target.value) }></input></div>
-          :<div className="int-rate-input"><input value={r} type="text" onChange={(e)=>setR(e.target.value)}></input></div>
+          empty? <div className="int-rate-input"><input type='number' min='1' placeholder="This field is mandatory" onChange={(e)=>setR(e.target.value) }></input></div>
+          :<div className="int-rate-input"><input value={r} type='number' min='1' onChange={(e)=>setR(e.target.value)}></input></div>
 
         }
       </div>
@@ -156,8 +156,8 @@ export default function LoanComponent(){
           
         </select>
         {
-          empty? <div className="loan-time-input"><input type="text" placeholder="This field is mandatory" onChange={(e)=> setN(e.target.value)}></input></div>
-          : <div className="loan-time-input"><input value={n} type="text" onChange={(e)=> setN(Number(e.target.value))}></input></div>
+          empty? <div className="loan-time-input"><input type='number' min='1' placeholder="This field is mandatory" onChange={(e)=> setN(e.target.value)}></input></div>
+          : <div className="loan-time-input"><input value={n} type='number' min='1' onChange={(e)=> setN(Number(e.target.value))}></input></div>
         }
       </div>
     </div>
