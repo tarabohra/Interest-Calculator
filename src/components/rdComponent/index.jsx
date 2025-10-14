@@ -92,16 +92,16 @@ export default function RdComponent(){
         <div className="amt-block">
           <label>Amount</label>
           {
-            isEmpty? <input type='number' min='1' onChange={(e)=>setAmount(e.target.value)} placeholder='Mandatory'></input>
-            :<input type='number' min='1' value={amount} onChange={(e)=>setAmount(e.target.value)}></input>
+            isEmpty? <input type='number' pattern="\d*" min='1' onChange={(e)=>setAmount(e.target.value)} placeholder='Mandatory'></input>
+            :<input type='number' min='1' pattern="\d*" value={amount} onChange={(e)=>setAmount(e.target.value)}></input>
 
           }
       </div>
         <div className="roi-div">
           <label>Rate of Interest</label>
           {
-            isEmpty? <input type='number' min='1' onChange={(e)=>setRoi(e.target.value)} placeholder='Mandatory'></input>
-            :<input type='number' min='1'  value={roi} onChange={(e)=>setRoi(e.target.value)}></input>
+            isEmpty? <input type='number' pattern="\d*" min='1' onChange={(e)=>setRoi(e.target.value)} placeholder='Mandatory'></input>
+            :<input type='number' min='1' pattern="\d*" value={roi} onChange={(e)=>setRoi(e.target.value)}></input>
 
           }
         </div>
@@ -116,8 +116,8 @@ export default function RdComponent(){
             <option>Months</option>
           </select>
           {
-            isEmpty? <input type='number' min='1' onChange={(e)=>setTime(e.target.value)} placeholder='Mandatory'></input>
-            :<input type='number' min='1' value={time} onChange={(e)=>setTime(e.target.value)}></input>          }
+            isEmpty? <input type='number' pattern="\d*" min='1' onChange={(e)=>setTime(e.target.value)} placeholder='Mandatory'></input>
+            :<input type='number' min='1' pattern="\d*" value={time} onChange={(e)=>setTime(e.target.value)}></input>          }
           </div>
         
         </div>

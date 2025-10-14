@@ -93,8 +93,8 @@ export default function FdComponent(){
           <label>Amount (₹)</label>
         </div>
         {
-          isEmpty? <input type='number' min='1' onChange={(e)=>setAmount(e.target.value)} placeholder='Please enter this field'></input>
-          : <input type='number' min='1' value={amount} onChange={(e)=>setAmount(e.target.value)}></input>
+          isEmpty? <input type='number' pattern="\d*" min='1' onChange={(e)=>setAmount(e.target.value)} placeholder='Please enter this field'></input>
+          : <input type='number' pattern="\d*" min='1' value={amount} onChange={(e)=>setAmount(e.target.value)}></input>
 
         }
       </div>
@@ -103,8 +103,8 @@ export default function FdComponent(){
         <div className="roi-div">
           <label>Rate of Interest (%)</label>
           {
-            isEmpty? <input type='number' min='1' onChange={(e)=>setRoi(e.target.value)} placeholder='Please enter this field'></input>
-            :<input type='number' min='1' value={roi} onChange={(e)=>setRoi(e.target.value)}></input>
+            isEmpty? <input type='number' pattern="\d*" min='1' onChange={(e)=>setRoi(e.target.value)} placeholder='Please enter this field'></input>
+            :<input type='number' min='1' pattern="\d*" value={roi} onChange={(e)=>setRoi(e.target.value)}></input>
 
           }
         </div>
@@ -128,8 +128,8 @@ export default function FdComponent(){
               <option value='Days'>Days</option>
             </select>
             {
-              isEmpty? <input type='number' min='1'  onChange={(e)=>setTime(e.target.value)} placeholder='mandatory'></input>
-              :<input type='number' min='1' value={time} onChange={(e)=>setTime(e.target.value)}></input>
+              isEmpty? <input type='number' pattern="\d*" min='1'  onChange={(e)=>setTime(e.target.value)} placeholder='mandatory'></input>
+              :<input type='number' pattern="\d*" min='1' value={time} onChange={(e)=>setTime(e.target.value)}></input>
 
             }
           </div>
