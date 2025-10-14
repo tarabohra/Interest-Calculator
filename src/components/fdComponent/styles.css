@@ -1,0 +1,23 @@
+
+
+.tenure-entry{
+  display:flex;
+  flex-direction: row;
+  margin-left:5px;
+  
+}
+
+.tenure-entry input{
+  width:90px;
+  height: 20px;
+}
+
+.tenure-entry select{
+  width:70px;
+  background-color: rgb(129, 202, 202);
+}
+
+.amt-div input::placeholder, .roi-div input::placeholder, .tenure-entry input::placeholder{
+  color: red;
+  opacity:0.5;
+}

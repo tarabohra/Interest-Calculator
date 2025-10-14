@@ -1,0 +1,44 @@
+body{
+  background-color: rgb(185, 166, 142);
+}
+
+@media only screen and (width<=600px) {
+  .cat-bar-div{
+    width: 85vw;
+    display: flex;
+    flex-direction: row;
+    }
+}
+@media only screen and (width>600px){
+  .cat-bar-div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+ 
+.loan-btn,
+.rd-btn,
+.fd-btn{
+ width: 100%;
+ border: 1px solid darkgrey;
+ background-color: grey;
+ text-decoration: none;
+ font-size: 20px;
+ text-align: center;
+ 
+}
+
+.loan-btn:hover,
+.rd-btn:hover,
+.fd-btn:hover{
+  cursor: pointer;
+  background-color: antiquewhite;
+}
+
+.loan-btn:focus,
+.rd-btn:focus,
+.fd-btn:focus{
+  background-color: gray;
+}

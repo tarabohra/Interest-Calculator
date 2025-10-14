@@ -1,0 +1,332 @@
+body{
+  background-color: white;
+}
+@media only screen and (width<=680px) {
+ .container-div{
+    width:85vw;
+    border: 1px solid #808080;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media only screen and (width>680px){
+  .container-div{
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    border: 1px solid #808080;
+  }
+}
+
+.radio-btn-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.emi-radio-div,
+.int-radio-div{
+  font-size: 20px;
+  color: rgb(1, 108, 102);
+}
+
+.emi-radio-div input,
+.int-radio-div input{
+  margin-top: 10px;
+  margin-left: 10px;
+  height: 15px;
+  width: 15px;
+}
+
+@media only screen and (width<=1260px) {
+  .result-clm{
+  display: flex;
+  flex-direction:column;
+}
+ .result-pie{
+    width: auto;
+    max-width: 200px;
+    display: flex;
+    margin: 4px auto;
+  }
+}
+
+@media only screen and (width>1260px){
+  .result-clm{
+    display: flex;
+    flex-direction:row;
+  }
+ .result-pie{
+    width: auto;
+    max-width: 200px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.amount-bar{
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  min-width: 70%;
+}
+
+.emi-div, 
+.int-div,
+.totalPay-div{
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-size: 20px;
+  color: rgb(2, 72, 2);
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  margin-right: 10px;
+}
+
+
+.visual-bar{
+  margin-top: 15px;
+  margin-left: 25px;
+  width:40%;
+  height:90%;
+  margin-right: 40px;
+  background-color: rgb(197, 11, 42);
+  border-radius: 100%;
+}
+
+.loan-container{
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  margin-left:60px;
+  margin-right: 60px;
+}
+
+
+.loan-label-div{
+  margin-bottom: 10px;
+}
+
+
+.loan-label{
+  font-size: 20px;
+}
+
+.loan-amt{
+  display: flex;
+  flex-direction: row;
+ 
+}
+
+.loan-label{
+  font-size: 20px;
+}
+
+.rupee-sign{
+  border: 1px solid rgb(108, 106, 106);
+  padding: 10px;
+  padding-left:15px ;
+  padding-right: 15px;
+  font-size: 20px;
+}
+
+.loan-amt-input{
+  border:1px solid rgb(108, 106, 106);
+  width: 100%;
+  outline: none;
+}
+
+.loan-amt-input input{
+  width: 98.8%;
+  height: 87%;
+  font-size: 20px;
+}
+
+.loan-amt-input input:hover{
+  border-color: rgb(0, 213, 255);
+}
+
+.loan-amt-input input:focus,
+.int-rate-input input:focus,
+.loan-time-input input:focus{
+  background-color: rgb(224, 237, 237);
+}
+
+.loan-amt-input input::placeholder{
+  color:red;
+  opacity: 0.5;
+  font-size: 12x;
+}
+
+
+.rate-container{
+  display: flex;
+  flex-direction: column;
+  margin-top: 45px;
+  margin-left:60px;
+  margin-right: 60px;
+}
+
+
+.int-rate{
+  display: flex;
+  flex-direction: row;
+  margin-left: 2px;
+}
+
+.rate-label-div{
+  margin-bottom: 10px;
+}
+
+.rate-label{
+  font-size: 20px;
+}
+
+.percent-sign{
+  border: 1px solid rgb(108, 106, 106);
+  padding: 10px;
+  padding-left:12px ;
+  padding-right: 12px;
+  font-size: 17px;
+}
+
+.int-rate-input{
+  border:1px solid rgb(108, 106, 106);
+  width: 100%;
+}
+
+.int-rate-input input:hover{
+  border-color: rgb(0, 213, 255);
+}
+
+.int-rate-input input::placeholder{
+  color:red;
+  opacity: 0.5;
+  font-size: 12x;
+}
+
+
+.int-rate-input input{
+  width: 98.8%;
+  height: 88%;
+  font-size: 20px;
+  
+}
+
+.freq-container,
+.time-container{
+  display: flex;
+  flex-direction: column;
+  margin-top: 45px;
+  margin-left:60px;
+  margin-right: 60px;
+}
+
+
+.freq-label-div,
+.time-label-div{
+  margin-bottom: 10px;
+}
+
+.freq-label,
+.time-label{
+  font-size: 20px;
+}
+
+.freq-time,
+.loan-time{
+  display: flex;
+  flex-direction: row;
+  margin-left: 2px;
+}
+
+.option-bar{
+  border: 1px solid rgb(108, 106, 106);
+  padding: 10px;
+  padding-left:10px ;
+  padding-right: 10px;
+  font-size: 15px;
+  background-color: rgb(136, 194, 194);
+}
+
+.loan-time-input{
+  border:1px solid rgb(108, 106, 106);
+  width: 100%;
+}
+
+.loan-time-input input{
+  width: 98.8%;
+  height: 87%;
+  font-size: 20px;
+}
+
+.loan-time-input input:hover{
+  border-color: rgb(0, 213, 255);
+}
+
+.loan-time-input input::placeholder{
+  color:red;
+  opacity: 0.5;
+  font-size: 12x;
+}
+
+.calc-btn-container,
+.reset-btn-container{
+  margin-top: 50px;
+  padding-bottom: 20px;
+}
+
+.calc-btn{
+  width: 10vw;
+  height: 7vh;
+  border-radius: 10px;
+  background-color: rgb(136, 194, 194);
+  font-size: 20px;
+  border: none;
+}
+
+.reset-btn{
+  width: 10vw;
+  height: 7vh;
+  border-radius: 10px;
+  background-color: rgb(205, 198, 198);
+  margin-left: 50px;
+  font-size: 20px;
+  border: none;
+}
+
+
+.reset-btn:hover{
+  cursor: pointer;
+  background-color: rgb(155, 154, 154);
+}
+
+.reset-btn:active{
+  background-color:  rgb(205, 198, 198);
+}
+
+
+.calc-btn:hover{
+  cursor: pointer;
+  background-color: aqua;
+}
+
+.calc-btn:active{
+  background-color: rgb(28, 140, 140);
+}
+
+.freq-option-bar{
+  border: 1px solid rgb(108, 106, 106);
+  padding: 10px;
+  padding-left:10px ;
+  padding-right: 10px;
+  font-size: 15px;
+  background-color:  rgb(163, 195, 195);
+  width: 99.8%;
+  height: 87%;
+}
+
+.btn-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
