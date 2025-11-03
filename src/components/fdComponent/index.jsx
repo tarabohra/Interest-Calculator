@@ -103,8 +103,8 @@ export default function FdComponent(){
         <div className="roi-div">
           <label>Rate of Interest (%)</label>
           {
-            isEmpty? <input type='number' pattern="\d*" min='1' onChange={(e)=>setRoi(e.target.value)} placeholder='Please enter this field'></input>
-            :<input type='number' min='1' pattern="\d*" value={roi} onChange={(e)=>setRoi(e.target.value)}></input>
+            isEmpty? <input type='number' inputMode="decimal" step="any"  onChange={(e)=>setRoi(e.target.value)} placeholder='Please enter this field'></input>
+            :<input type='number' inputMode="decimal" step="any"  value={roi} onChange={(e)=>setRoi(e.target.value)}></input>
 
           }
         </div>

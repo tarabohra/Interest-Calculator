@@ -121,8 +121,8 @@ export default function LoanComponent(){
       <div className="int-rate">
         <div className="percent-sign">％</div>
         {
-          empty? <div className="int-rate-input"><input type='number' pattern="\d*" min='1' placeholder="This field is mandatory" onChange={(e)=>setR(e.target.value) }></input></div>
-          :<div className="int-rate-input"><input value={r} type='number' pattern="\d*" min='1' onChange={(e)=>setR(e.target.value)}></input></div>
+          empty? <div className="int-rate-input"><input type='number' inputMode="decimal" step="any"  placeholder="This field is mandatory" onChange={(e)=>setR(e.target.value) }></input></div>
+          :<div className="int-rate-input"><input value={r} type='number' inputMode="decimal" step="any"  onChange={(e)=>setR(e.target.value)}></input></div>
 
         }
       </div>
@@ -157,7 +157,7 @@ export default function LoanComponent(){
         </select>
         {
           empty? <div className="loan-time-input"><input type='number' pattern="\d*" min='1' placeholder="This field is mandatory" onChange={(e)=> setN(e.target.value)}></input></div>
-          : <div className="loan-time-input"><input value={n} type='number' pattern="\d*" min='1' onChange={(e)=> setN(Number(e.target.value))}></input></div>
+          : <div className="loan-time-input"><input type='number' pattern="\d*" min='1' onChange={(e)=> setN(Number(e.target.value))}></input></div>
         }
       </div>
     </div>
